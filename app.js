@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let codeqrimg = document.getElementById('qr_code');
     let btnPay = document.getElementById('btn-pay');
 
+    let closest_station = document.getElementById("closestStation");
+
     let countItem = items.length;
     let itemActive = 0;
     let refreshInterval;
@@ -57,9 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
         codeqrimg.src = 'css/ic_code_qr.svg';
     });
     
+
+
     btn.addEventListener("click", function() {
-        let location = locationInput.value.trim(); 
-        let destination = destinationInput.value.trim();
+
+        let location = locationInput.options[locationInput.selectedIndex].text.toLowerCase();
+        let destination = destinationInput.options[destinationInput.selectedIndex].text.toLowerCase();
+
+        closest_station.textContent = `${location} Bus Station`;
+
 
         if (location === 'eucalyptus' && destination === 'bab hassen') {
             changeImg('css/euca_to_babhassen.svg');
@@ -67,9 +75,33 @@ document.addEventListener("DOMContentLoaded", function() {
             estimatedTime.textContent = '3 min'
         } else if (location === 'eucalyptus' && destination === 'place des martyrs'){
             changeImg('css/euca-to-martyr.svg');
-            busNum.textContent = '4702'
-            estimatedTime.textContent = '10 min'
-        } else {
+            busNum.textContent = '4702';
+            estimatedTime.textContent = '10 min';
+        } else if (location === 'draria' && destination === 'bab hassen'){
+            changeImg('css/draria_to_babhassen.png');
+            busNum.textContent = '4008';
+            estimatedTime.textContent = '15 min';
+        } else if (location === 'draria' && destination === 'eucalyptus'){
+            changeImg('css/draria_to_euca.png');
+            busNum.textContent = '4028';
+            estimatedTime.textContent = '35 min';
+        }  else if (location === 'draria' && destination === 'place des martyrs'){
+            changeImg('css/draria_to_martyr.png');
+            busNum.textContent = '4128';
+            estimatedTime.textContent = '5 min';
+        } else if (location === 'ben aknoun' && destination === 'place des martyrs'){
+            changeImg('css/placedesmartyrs.svg');
+            busNum.textContent = '2008';
+            estimatedTime.textContent = '9 min';
+        }else if (location === 'ben aknoun' && destination === 'bab hassen'){
+            changeImg('css/babhassen.svg');
+            busNum.textContent = '105';
+            estimatedTime.textContent = '1 min';
+        }else if (location === 'ben aknoun' && destination === 'eucalyptus'){
+            changeImg('css/eucalyptus.svg');
+            busNum.textContent = '4005';
+            estimatedTime.textContent = '25 min';
+        }  else {
             changeImg('css/img-bus-thingy.png');
             busNum.textContent = 'XYZ'
             estimatedTime.textContent = 'X min'

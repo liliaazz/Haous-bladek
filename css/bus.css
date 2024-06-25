@@ -90,7 +90,7 @@ body {
     flex-wrap: wrap;
     margin-right: auto;
     margin-left: auto;
-    width: 70%;
+    width: 60%;
 
 }
 
@@ -187,12 +187,14 @@ body{
     box-shadow: 2px 2px black;
     border-radius: 5px;
     padding-top: 5px;
-    width: 55px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
 }
 
+#bus-num , #estimate-time {
+    width: 55px;
+}
 
 
 @media screen and (max-width: 1100px) {
@@ -223,7 +225,9 @@ body{
         height: 150px;
     }
 
-    
+    .inputs {
+        width: 100%;
+    }
 
     .bus-section {
         width: 100%;
@@ -250,7 +254,7 @@ body{
     flex-wrap: wrap;
 }
 
-#btn-pay {
+#btn-pay, .ticket {
     width: 150px;
     height: 50px;
     margin-top: 15px;
@@ -260,6 +264,26 @@ body{
     border-radius: 25px;
 }
 
+.ticket {
+    text-decoration: none;
+    color: white;
+    background-color: #4d869c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+#location , #destination {
+    border-radius: 15px;
+    padding: 10px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.test {
+    border-radius: 15px;
+    padding: 10px;
+}
 
 .codeQr {
     padding-bottom: 50px;
@@ -381,7 +405,7 @@ body{
     border: 1px solid white;
 }
 
-#check-offer:hover , #btn-pay:hover, #btn:hover {
+#check-offer:hover , #btn-pay:hover, #btn:hover , .ticket:hover{
     cursor: pointer;
     box-shadow: 2px 2px rgb(255, 255, 255);
     color: #4d869c;

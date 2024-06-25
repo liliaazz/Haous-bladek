@@ -1,19 +1,8 @@
-body{
-    background-color: #4d869c;
+body {
+    color: black;
 }
-.restorant {
-    background-image: url(restaurant-blueeee.png);
-    height: 95vh;
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-@media screen and (max-width: 900px) {
-    .restorant {
-        background-image: url(restaurant-blueeee.png);
-    }
-}
-.MyrestorantTitle {
+
+.MyBusTitle {
     text-align: center;
      font-size: 70px;
      color: white;
@@ -24,8 +13,93 @@ body{
 
        text-decoration: underline;
 }
+
+.restaurent {
+    background-image: url(restaurent-main-img.png);
+    height: 95vh;
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color: black;
+}
+
+
+@media screen and (max-width: 470px) {
+
+    #changewidth {
+        height: 250px;
+    }
+    
+}
+
+
+.images img {
+    height: 450px;
+}
+
+@media screen and (max-width: 1400px) {
+    .main-container {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 7%;
+        width: 70%;
+    }
+    
+
+    #content-resto {
+        order: 2; 
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    #images {
+        order: 1;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .images img {
+        height: 350px;
+    }
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    width: 70%;
+}
+
+.content-resto {
+    order: 1;
+}
+
+.images {
+    order: 2;
+}
+
+.content-resto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+}
+
+div div p , div div h1 {
+    color: black;
+}
+
 main{
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
 }
 .container-services{
@@ -39,10 +113,11 @@ main{
 }
 .info-card{
     background-color: white;
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 5px 5px rgb(211, 211, 211);
     text-decoration: none;
     color: black;
-    width: 220px;
-    ;
+    width: 220px;;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -87,7 +162,6 @@ main{
     transition: 0.5s;
 }
 .services h1{
-    color: white;
     margin-bottom: 40px;
     margin-left: 5%;
     text-decoration: underline;

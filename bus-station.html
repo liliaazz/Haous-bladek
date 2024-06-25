@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bus.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="image/ic-bus.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image/img-haous-bladek.png" type="image/x-icon">
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -14,14 +14,14 @@
 </head>
 <body>
     
-    <header>
+    <header style="background-color: #4d869c;">
         <div class="logo">
             <img src="image/img-haous-bladek.png" alt="logo" height="60px">
         </div>
         <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#">contact</a></li>        
+            <li><a href="index.html" style="text-decoration: none;">Accueil</a></li>
+            <li><a href="#service" style="text-decoration: none;">Service</a></li>
+            <li><a href="#" style="text-decoration: none;">contact</a></li>        
         </ul>
         <div class="search" style="margin-right: 40px;">
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -39,15 +39,22 @@
     <section class="bus-section">
 
         <h1 class="text-center">Quelle est votre Destination!</h1>
-        <div class="inputs text-center">
-            <form action="" >
-                <input id="location" type="text" name="" placeholder="Entrer votre location" id="" class="inputWidth" >
-            </form>
+        <form action="" class="inputs">
+            <select name="location" id="location">
+                <option value="" class="test">Eucalyptus</option>
+                <option value="" class="test">Draria</option>
+                <option value="" class="test">ben aknoun</option>
+            </select>
 
-            <form action="">
-                <input id="destination" type="text" name="" placeholder="Entrer votre Destination" class="inputWidth" id="">
-            </form>
-        </div>
+            <select name="destination" id="destination">
+                <option value=""  class="test">Eucalyptus</option>
+                <option value="" class="test">Bab hassen</option>
+                <option value="" class="test">Place des martyrs</option>
+            </select>
+
+        </form>
+
+        
 
         <button onclick="getValue()" class="m-auto" id="btn">Recherche</button>
 
@@ -56,7 +63,7 @@
                 <div class="bus-station">
                     <h1>station bus la plus proche</h1>
                     <div class="serial-bus-num">
-                        <h1>Eucalyptus</h1>
+                        <h1 id="closestStation" class="info">XYZ station</h1>
                     </div>
                 </div>
 
@@ -66,7 +73,7 @@
                         <div class="container-num-time">
                             <div class="bus-num">
                                 <h3>Bus num</h3>
-                                <span class="info" id="bus-num">XYZ</span>
+                                <span class="info" id="bus-num" >XYZ</span>
                             </div>
                             <div class="bus-time">
                                 <h3>Temps Arrivé</h3>
@@ -107,13 +114,6 @@
                 <input id="lname" type="text" name="" placeholder="Entrer votre nom!" id="" class="inputWidth" required class="payInput">
             </form>
 
-            <form action="">
-                <input id="ccpNum" type="tel" name="" placeholder="Entrer numero de CCP" id="" class="inputWidth" required class="payInput">
-            </form>
-
-            <form action="">
-                <input id="mdpNum" type="tel" name="" placeholder="Entrer mdp de ccp" id="" class="inputWidth" required class="payInput">
-            </form>
 
         </div>
 
@@ -134,7 +134,7 @@
             </div>
         </div>
 
-        <button onclick="getValue()" class="m-auto" id="btn-pay">Telecharger votre ticket!</button>
+        <a href="image/ticket.png" download="image/ticket.png" class="ticket">download ticket</a>
     </section>
 
 
